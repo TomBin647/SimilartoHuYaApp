@@ -246,6 +246,7 @@
         self.selectedIndex = [NSIndexPath indexPathForItem:0 inSection:0];
         [self collectionView:self.tagCollectionView didSelectItemAtIndexPath:self.selectedIndex];
     }
+    
 }
 
 

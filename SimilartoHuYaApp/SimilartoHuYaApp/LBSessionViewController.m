@@ -14,11 +14,12 @@
 
 @implementation LBSessionViewController
 
-//-(void) viewDidAppear:(BOOL)animated {
-//    self.tabBarController.tabBar.hidden = NO;
-//    self.navigationItem.leftBarButtonItem = nil;
-//    
-//}
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+    self.navigationItem.leftBarButtonItem = nil;
+    
+}
 
 -(instancetype)init {
     NSArray *titleArray = @[@"推荐",@"DOTA2",@"地下城与勇士",@"方舟:生存进化",@"穿越火线",@"魔兽争霸",@"英雄联盟",@"秀场"];
