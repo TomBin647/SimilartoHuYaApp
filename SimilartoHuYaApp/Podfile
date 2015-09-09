@@ -1,0 +1,12 @@
+platform:ios,'7.0'
+
+pod 'mp3lame-for-ios', '~> 0.1.1'
+pod 'AFNetworking', '~> 2.5.0'
+pod 'SDWebImage', '~> 3.7.1'
+pod 'MBProgressHUD', '~> 0.9'
+pod 'FMDB', '~> 2.4'
+pod 'GDataXML-HTML', '~> 1.2.0'
+pod 'Masonry', '~> 0.6.1'
+pod 'SWTableViewCell', '~> 0.3.7'
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.1-beta'
+pod 'YLGIFImage'
