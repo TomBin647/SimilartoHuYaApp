@@ -83,6 +83,8 @@ return __object;\
  */
 #define __IOS8_OR_LATER [[UIDevice currentDevice].systemVersion floatValue] >= 8.0f
 
+#define iOS7x ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f) && ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0f)
+
 #define KS_IOS7_OR_LATER __IOS7_OR_LATER
 #define KS_IOS8_OR_LATER __IOS8_OR_LATER
 

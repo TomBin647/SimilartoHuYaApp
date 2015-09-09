@@ -14,10 +14,20 @@
 
 @implementation LBSessionViewController
 
--(void) viewDidAppear:(BOOL)animated {
-    self.tabBarController.tabBar.hidden = NO;
-    self.navigationItem.leftBarButtonItem = nil;
-    
+//-(void) viewDidAppear:(BOOL)animated {
+//    self.tabBarController.tabBar.hidden = NO;
+//    self.navigationItem.leftBarButtonItem = nil;
+//    
+//}
+
+-(instancetype)init {
+    NSArray *titleArray = @[@"推荐",@"DOTA2",@"地下城与勇士",@"方舟:生存进化",@"穿越火线",@"魔兽争霸",@"英雄联盟",@"秀场"];
+    NSArray * viewControllerNames = @[@"recommendViewController",@"dota2ViewController",@"underGroundCityViewController",@"arkViewController",@"CSViewController",@"moshouViewController",@"LOLViewController",@"showViewController"];
+    if (self = [super initWithTitles:titleArray andSubViewdisplayClassNames:viewControllerNames andTagViewHeight:49]) {
+        
+        
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -25,6 +35,10 @@
     // Do any additional setup after loading the view.
     self.title = @"类似雅虎app平台主界面";
     self.tabBarItem.title = @"班级圈";
+    
+    self.graceTime = 300;
+    //self.backgroundColor = [UIColor whiteColor];
+    
 }
 
 - (void)didReceiveMemoryWarning {
