@@ -18,16 +18,13 @@
 }
 */
 
--(instancetype)init {
+-(instancetype)initWithFrame:(CGRect)frame {
     if (self) {
-        self = [super init];
-        
+        self = [super initWithFrame:frame];
         self.backgroundColor = [UIColor yellowColor];
-        
     }
     return self;
 }
-
 
 
 @end

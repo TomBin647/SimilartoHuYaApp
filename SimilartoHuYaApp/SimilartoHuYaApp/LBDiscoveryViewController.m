@@ -96,6 +96,7 @@
 
 -(void)addWeather{
     self.weatherView= [[weatherView alloc]initWithFrame:CGRectMake(0, 64, KS_SCREEN_WIDTH, 300)];
+    //self.weatherView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:self.weatherView];
     self.weatherView.hidden = YES;
     self.weatherView.alpha = 0.9;
@@ -157,18 +158,36 @@
 }
 
 -(void) addtitleLabel {
+    CGFloat width = 0;
     for (int i=0; i < 8; i++) {
+        
+        
+        CGSize titleSize = [self sizeForTitle:self.titleArray[i] withFont:[UIFont systemFontOfSize:19]];
         GBTitleLabel * titleLable = [[GBTitleLabel alloc]init];
         titleLable.text = self.titleArray[i];
-        titleLable.frame = CGRectMake(i * 70, 0, 70, 40);
+        titleLable.frame = CGRectMake(width, 5, titleSize.width, titleSize.height);
         titleLable.font = [UIFont fontWithName:@"HYQiHei" size:19];
         [self.titleScrollerView addSubview:titleLable];
         titleLable.tag = i;
         titleLable.userInteractionEnabled = YES;
         [titleLable addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleLabelClick:)]];
+        width +=titleSize.width;
+        
     }
-    self.titleScrollerView.contentSize = CGSizeMake(70 * 8, 0);
+    self.titleScrollerView.contentSize = CGSizeMake(width, 0);
 }
+
+- (CGSize)sizeForTitle:(NSString *)title withFont:(UIFont *)font
+{
+    CGRect titleRect = [title boundingRectWithSize:CGSizeMake(FLT_MAX, FLT_MAX)
+                                           options:NSStringDrawingUsesLineFragmentOrigin
+                                        attributes:@{NSFontAttributeName : font}
+                                           context:nil];
+    
+    return CGSizeMake(titleRect.size.width,
+                      titleRect.size.height);
+}
+
 -(void)titleLabelClick:(UIGestureRecognizer *)recognizer {
     GBTitleLabel * title = (GBTitleLabel *) recognizer.view;
     CGFloat offsetX = title.tag * self.pageScrollerView.frame.size.width;
