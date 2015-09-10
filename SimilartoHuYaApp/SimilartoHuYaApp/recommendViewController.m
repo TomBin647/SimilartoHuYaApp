@@ -22,6 +22,8 @@
     [button setTintColor:[UIColor yellowColor]];
     button.backgroundColor = [UIColor redColor];
     [self.view addSubview:button];
+    
+    //在里面可以添加想要的内容  例如视频播放器  tableView scrollerView  类似市面上的一些直播平台app
 }
 
 - (void)didReceiveMemoryWarning {

@@ -184,6 +184,9 @@
 				2222DA2C1B9FE000009611F6 /* LBNavgationViewController.m */,
 				2222DA631BA0155A009611F6 /* PushViewController */,
 				2222DA2E1B9FE05B009611F6 /* fourView */,
+				223D64C11BA1130B006802EA /* 上镜 */,
+				223D64C01BA112DA006802EA /* 发现 */,
+				223D64C21BA11319006802EA /* 我的 */,
 				2222D9F91B9FD898009611F6 /* AppDelegate.h */,
 				2222D9FA1B9FD898009611F6 /* AppDelegate.m */,
 				2222DA271B9FDD2E009611F6 /* PrefixHeader.pch */,
@@ -243,12 +246,6 @@
 				2222DA2F1B9FE081009611F6 /* LBSessionViewController.h */,
 				2222DA301B9FE081009611F6 /* LBSessionViewController.m */,
 				2222DA511B9FF828009611F6 /* YaHuView */,
-				2222DA321B9FE091009611F6 /* LBContactsViewController.h */,
-				2222DA331B9FE091009611F6 /* LBContactsViewController.m */,
-				2222DA351B9FE09F009611F6 /* LBDiscoveryViewController.h */,
-				2222DA361B9FE09F009611F6 /* LBDiscoveryViewController.m */,
-				2222DA381B9FE0B0009611F6 /* LBMeViewController.h */,
-				2222DA391B9FE0B0009611F6 /* LBMeViewController.m */,
 			);
 			name = fourView;
 			sourceTree = "<group>";
@@ -323,6 +320,33 @@
 				2222DA7A1BA0160A009611F6 /* showViewController.m */,
 			);
 			name = PushViewController;
+			sourceTree = "<group>";
+		};
+		223D64C01BA112DA006802EA /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				2222DA351B9FE09F009611F6 /* LBDiscoveryViewController.h */,
+				2222DA361B9FE09F009611F6 /* LBDiscoveryViewController.m */,
+			);
+			name = "发现";
+			sourceTree = "<group>";
+		};
+		223D64C11BA1130B006802EA /* 上镜 */ = {
+			isa = PBXGroup;
+			children = (
+				2222DA331B9FE091009611F6 /* LBContactsViewController.m */,
+				2222DA321B9FE091009611F6 /* LBContactsViewController.h */,
+			);
+			name = "上镜";
+			sourceTree = "<group>";
+		};
+		223D64C21BA11319006802EA /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				2222DA381B9FE0B0009611F6 /* LBMeViewController.h */,
+				2222DA391B9FE0B0009611F6 /* LBMeViewController.m */,
+			);
+			name = "我的";
 			sourceTree = "<group>";
 		};
 		C2D6890D14EF2B1AFD67F1A2 /* Pods */ = {
