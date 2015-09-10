@@ -46,6 +46,7 @@
 		2222DA781BA015FE009611F6 /* LOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA771BA015FE009611F6 /* LOLViewController.m */; };
 		2222DA7B1BA0160A009611F6 /* showViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA7A1BA0160A009611F6 /* showViewController.m */; };
 		223D64C51BA1186C006802EA /* GBTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D64C41BA1186C006802EA /* GBTitleLabel.m */; };
+		223D64C81BA12F15006802EA /* weatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D64C71BA12F15006802EA /* weatherView.m */; };
 		957D73BFD1DEE8EA53E2E30F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B246F70C1DAF25D5105408 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,8 @@
 		2222DA7A1BA0160A009611F6 /* showViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showViewController.m; sourceTree = "<group>"; };
 		223D64C31BA1186C006802EA /* GBTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBTitleLabel.h; sourceTree = "<group>"; };
 		223D64C41BA1186C006802EA /* GBTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBTitleLabel.m; sourceTree = "<group>"; };
+		223D64C61BA12F15006802EA /* weatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weatherView.h; sourceTree = "<group>"; };
+		223D64C71BA12F15006802EA /* weatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = weatherView.m; sourceTree = "<group>"; };
 		37B246F70C1DAF25D5105408 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A72BBA0CF4C12A02A59CCED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D1E64F2509CB1BB2AA7DA05D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				2222DA361B9FE09F009611F6 /* LBDiscoveryViewController.m */,
 				223D64C31BA1186C006802EA /* GBTitleLabel.h */,
 				223D64C41BA1186C006802EA /* GBTitleLabel.m */,
+				223D64C61BA12F15006802EA /* weatherView.h */,
+				223D64C71BA12F15006802EA /* weatherView.m */,
 			);
 			name = "发现";
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				2222DA5F1BA009FE009611F6 /* XBTagTitleModel.m in Sources */,
 				223D64C51BA1186C006802EA /* GBTitleLabel.m in Sources */,
 				2222DA661BA015AA009611F6 /* recommendViewController.m in Sources */,
+				223D64C81BA12F15006802EA /* weatherView.m in Sources */,
 				2222DA2A1B9FDF13009611F6 /* GBMainViewController.m in Sources */,
 				2222DA211B9FDA87009611F6 /* GBBodyViewController.m in Sources */,
 				2222D9FB1B9FD898009611F6 /* AppDelegate.m in Sources */,

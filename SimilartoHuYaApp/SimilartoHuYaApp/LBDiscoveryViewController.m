@@ -10,7 +10,11 @@
 
 #import "GBTitleLabel.h"
 
-@interface LBDiscoveryViewController ()<UIScrollViewDelegate>
+#import "weatherView.h"
+
+@interface LBDiscoveryViewController ()<UIScrollViewDelegate> {
+    BOOL showWeathRoom;
+}
 
 @property (nonatomic,strong) UIScrollView * titleScrollerView;
 
@@ -18,7 +22,12 @@
 
 @property (nonatomic,strong) NSArray * titleArray;
 
+@property (nonatomic,strong) weatherView * weatherView;
+
 @property (nonatomic,strong) NSArray * viewControllerNames;
+
+@property(nonatomic,strong)UIButton *rightItem;
+
 
 @end
 
@@ -72,14 +81,59 @@
     [self addController];
     [self addtitleLabel];
     
-    //UIViewController * vc = [self.childViewControllers firstObject];
-    //vc.view.frame = self.pageScrollerView.bounds;
-    //[self.pageScrollerView addSubview:vc.view];
+    
     
     GBTitleLabel * title = [self.titleScrollerView.subviews firstObject];
     title.scale = 1.0;
     
+    
+    showWeathRoom = NO;
+    
+    
+    [self addWeather];
+    
 }
+
+-(void)addWeather{
+    self.weatherView= [[weatherView alloc]initWithFrame:CGRectMake(0, 64, KS_SCREEN_WIDTH, 300)];
+    [self.view addSubview:self.weatherView];
+    self.weatherView.hidden = YES;
+    self.weatherView.alpha = 0.9;
+    //weatherView.alpha = 0.9;
+}
+
+-(UIView *)customRightButtonView {
+    self.rightItem = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 45, 45)];
+    [self.rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
+    [self.rightItem addTarget:self action:@selector(rightButtonOnClickEventHandler:) forControlEvents:UIControlEventTouchUpInside];
+    return self.rightItem;
+}
+-(void)rightButtonOnClickEventHandler:(id)sender {
+    if (showWeathRoom == YES) {
+        showWeathRoom = NO;
+        self.weatherView.hidden = YES;
+        [UIView animateWithDuration:0.1 animations:^{
+            self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, M_1_PI * 5);
+            
+        } completion:^(BOOL finished) {
+            [self.rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
+        }];
+    } else {
+        [self.rightItem setImage:[UIImage imageNamed:@"223"] forState:UIControlStateNormal];
+        showWeathRoom = YES;
+        self.weatherView.hidden = NO;
+        [UIView animateWithDuration:0.2 animations:^{
+            self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, -M_1_PI * 6);
+            
+        } completion:^(BOOL finished) {
+            
+            [UIView animateWithDuration:0.1 animations:^{
+                self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, M_1_PI );
+            }];
+        }];
+    }
+}
+
 -(void) addController {
     for (int i = 0; i < 8; i++) {
         
